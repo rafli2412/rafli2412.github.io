@@ -42,7 +42,7 @@ function FewAlert() {
     alert("You deserve the good things in world.");
     alert("You're Perfect.");
     alert("Im glad that I've been able to be on your side.");
-    alert("Because Hey, you're name's literally means 'Healer'.")
+    alert("Because Hey, your name's literally means 'Healer'.")
     alert("And hell, How I've feeled you cure my wound so damn good.")
 }
 
