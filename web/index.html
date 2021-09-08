@@ -44,6 +44,10 @@
         <ion-icon name="close-outline" class="close"></ion-icon>
     </div>
 
+    <div class="toggle color" onclick="colorChange()">
+
+    </div>
+
     <div class="content" id="home">
         <div style="grid-column: 1 / 3;">
             <center style="font-family: 'Cabin', sans-serif;
@@ -177,7 +181,8 @@
 
             <div>
                 <span class="profile-left">Colors</span> : <span style="color: rgb(117, 52, 34);
-                font-family: 'Cabin', sans-serif;">Brown</span>, and prefer <span style="font-weight: 900;
+                font-family: 'Cabin', sans-serif;">Brown</span>, <span style="color: rgb(17, 32, 49);
+                font-family: 'Cabin', sans-serif;">Sage Green</span>, and prefer <span style="font-weight: 900;
                 font-family: 'Cabin', sans-serif;">Darker </span> Colors.
             </div><br>
 
@@ -226,6 +231,10 @@
             <div class="item"><img class="img" src="img/thumbnail/18.jpeg" alt="" onclick="expandImg(this)"></div>
             <div class="item"><img class="img" src="img/thumbnail/19.jpeg" alt="" onclick="expandImg(this)"></div>
             <div class="item"><img class="img" src="img/thumbnail/20.jpeg" alt="" onclick="expandImg(this)"></div>
+            <div class="item"><img class="img" src="img/thumbnail/21.jpeg" alt="" onclick="expandImg(this)"></div>
+            <div class="item"><img class="img" src="img/thumbnail/22.jpeg" alt="" onclick="expandImg(this)"></div>
+            <div class="item"><img class="img" src="img/thumbnail/23.jpeg" alt="" onclick="expandImg(this)"></div>
+            <div class="item"><img class="img" src="img/thumbnail/24.jpeg" alt="" onclick="expandImg(this)"></div>
         </div>
 
         <div class="img-container" style="grid-column: 1 / 2;">
@@ -268,6 +277,11 @@
             <div class="item"><img class="img" src="img/thumbnail/s18.jpeg" alt="" onclick="expandImg2(this)"></div>
             <div class="item"><img class="img" src="img/thumbnail/s19.jpeg" alt="" onclick="expandImg2(this)"></div>
             <div class="item"><img class="img" src="img/thumbnail/s20.jpeg" alt="" onclick="expandImg2(this)"></div>
+            <div class="item"><img class="img" src="img/thumbnail/s21.jpeg" alt="" onclick="expandImg2(this)"></div>
+            <div class="item"><img class="img" src="img/thumbnail/s22.jpeg" alt="" onclick="expandImg2(this)"></div>
+            <div class="item"><img class="img" src="img/thumbnail/s23.jpeg" alt="" onclick="expandImg2(this)"></div>
+            <div class="item"><img class="img" src="img/thumbnail/s24.jpeg" alt="" onclick="expandImg2(this)"></div>
+            <div class="item"><img class="img" src="img/thumbnail/s25.jpeg" alt="" onclick="expandImg2(this)"></div>
         </div>
         
         
@@ -463,34 +477,64 @@
 
     //day n quotes
         let day;
+        const quotesArray = [];
         switch (new Date().getDay()) {
             case 0:
                 day = "Sunday";
-                quotes = "You don't just stop loving someone because they don't love you back. You love them because you need them."
+                quotesArray[0] = "You don't just stop loving someone because they don't love you back. You love them because you need them.";
+                quotesArray[1] = "Everything's gonna be okay. Take your time. Charges up. And face it all in your best state.";
+
+                random = Math.floor(Math.random() * quotesArray.length);
+                quotes = quotesArray[random];
                 break;
             case 1:
                 day = "Monday";
-                quotes = "Life is just a piece of paper. But, your touch can color the white."
+                quotesArray[0] = "Life is just a piece of paper. But, your touch can color the white.";
+                quotesArray[1] = "To be able to lie at your wings, is the greatest achievment of my life. 'Cause those wings only take me higher and higher.";
+
+                random = Math.floor(Math.random() * quotesArray.length);
+                quotes = quotesArray[random];
                 break;
             case 2:
                 day = "Tuesday";
-                quotes = "Whatever the feeling is, let it be. The more you try to 'fulfill' it, the harder it is. Let the selfish side of the feeling remind us that sometimes we just want to go the way we should."
+                quotesArray[0] = "Whatever the feeling is, let it be. The more you try to 'fulfill' it, the harder it is. Let the selfish side of the feeling remind us that sometimes we just want to go the way we should.";
+                quotesArray[1] = "Times sure will do us part. But, even still, until then, let's stay together.";
+
+                random = Math.floor(Math.random() * quotesArray.length);
+                quotes = quotesArray[random];
                 break;
             case 3:
                 day = "Wednesday";
-                quotes = "You don't need everyone to love you. Just a few good people."
+                quotesArray[0] = "You don't need everyone to love you. Just a few good people.";
+                quotesArray[1] = "You don't have to be better for me, cause I love you for what's you.";
+
+                random = Math.floor(Math.random() * quotesArray.length);
+                quotes = quotesArray[random];
                 break;
             case 4:
                 day = "Thursday";
-                quotes = "Actually the world has so many good people. But, if you can't find one. Be one:)"
+                quotesArray[0] = "Actually the world has so many good people. But, if you can't find one. Be one:)";
+                quotesArray[1] = "Don't waste your time on hating yourself, cause' that's what other people job.";
+
+                random = Math.floor(Math.random() * quotesArray.length);
+                quotes = quotesArray[random];
                 break;
             case 5:
                 day = "Friday";
-                quotes = "Good times arrive when you least expect it. It could be any minute. So, don't fight the tears on your cheek. Because I know you'll find the strength when you're weak."
+                quotesArray[0] = "Good times arrive when you least expect it. It could be any minute. So, don't fight the tears on your cheek. Because I know you'll find the strength when you're weak.";
+                quotesArray[1] = "You are braver than you are, stronger than you seen, smarter than you think, and better than me";
+
+                random = Math.floor(Math.random() * quotesArray.length);
+                quotes = quotesArray[random];
                 break;
             case 6:
                 day = "Saturday";
-                quotes = "First thing to do before you do something, is to belive to yourself that you can do it. See it in your mind. Imagine how it is finished before you start out.";
+                quotesArray[0] = "First thing to do before you do something, is to belive to yourself that you can do it. See it in your mind. Imagine how it is finished before you start out.";
+                quotesArray[1] = "I always admire the endeavor you put on something. It may often not the best, but I know you've done yor best";
+
+                random = Math.floor(Math.random() * quotesArray.length);
+                quotes = quotesArray[random];
+                break;
         }
         document.getElementById("day").style.fontWeight += "900";
         document.getElementById("day").innerHTML += day;
