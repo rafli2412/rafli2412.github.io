@@ -46,6 +46,33 @@ function FewAlert() {
     alert("And hell, How I've feeled you cure my wound so damn good.")
 }
 
+//color change
+
+function colorChange() {
+    var root = document.querySelector(':root');
+    var rootColor = getComputedStyle(root);
+    var brown = ' rgb(255, 235, 201)';
+    var brown0 = 'rgb(255, 235, 201)';
+    var green = ' rgb(212, 236, 221)';
+    var green0 = 'rgb(212, 236, 221)';
+    
+    console.log(rootColor.getPropertyValue('--color-1'));
+
+    if (rootColor.getPropertyValue('--color-1') == brown || rootColor.getPropertyValue('--color-1') == brown0) {
+        root.style.setProperty('--color-1', 'rgb(212, 236, 221)');
+        root.style.setProperty('--color-2', 'rgb(52, 91, 99)');
+        root.style.setProperty('--color-3', 'rgb(21, 45, 53)');
+        root.style.setProperty('--color-4', 'rgb(17, 32, 49)');
+        root.style.setProperty('--color-change', 'rgb(117, 52, 34)');
+    } else if (rootColor.getPropertyValue('--color-1') == green || rootColor.getPropertyValue('--color-1') == green0) {
+        root.style.setProperty('--color-1', 'rgb(255, 235, 201)');
+        root.style.setProperty('--color-2', 'rgb(215, 151, 113)');
+        root.style.setProperty('--color-3', 'rgb(176, 91, 59)');
+        root.style.setProperty('--color-4', 'rgb(117, 52, 34)');
+        root.style.setProperty('--color-change', 'rgb(17, 32, 49)');
+    }
+}
+
 //button
 let button = document.getElementById("btn1");
 
@@ -56,6 +83,7 @@ function buttonChangeOver() {
 function buttonChangeOut() {
     button.innerHTML = "HmmMmm...";
 }
+
 
 //images
 function expandImg(imgs) {
