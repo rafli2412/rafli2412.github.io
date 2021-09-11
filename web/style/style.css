@@ -116,7 +116,7 @@ body {
     white-space: normal;
 }
 
-.toggle {
+.toggle, .color-pallete {
     position: fixed;
     top: 20px;
     right: 20px;
@@ -134,11 +134,59 @@ body {
 .toggle.color {
     top: 90px;
     transition: 0.5s;
+    overflow-y: hidden;
 }
 
-.toggle.toggle.color:hover {
-    background: var(--color-change);
+.toggle.color ion-icon.open, .toggle.sub-active ion-icon.close {
+    position: fixed;
+    display: block;
 }
+
+.toggle.color.sub-active ion-icon.open, .toggle.sub-active ion-icon.open {
+    position: fixed;
+    display: none;
+}
+
+.color-pallete {
+    height: 0px;
+    top: 160px;
+    overflow-y: hidden;
+    transition: 0.5s;
+}
+
+.color-pallete.active {
+    height: 300px;
+}
+
+.color-pallete .color {
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+}
+
+.color-pallete .color.c1 {
+    background: rgb(255, 235, 201);
+}
+
+.color-pallete .color.c2 {
+    background: rgb(229, 228, 204);
+}
+
+.color-pallete .color.c3 {
+    background: rgb(248, 237, 227);
+}
+
+.color-pallete .color.c4 {
+    background: rgb(212, 236, 221);
+}
+
+.color-pallete .color.c5 {
+    background: rgb(230, 62, 109);
+}
+
+/* .toggle.toggle.color:hover {
+    background: var(--color-change);
+} */
 
 .toggle ion-icon {
     position: absolute;
@@ -489,4 +537,3 @@ img#syf {
     }
 
 }
-

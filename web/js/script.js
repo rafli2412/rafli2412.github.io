@@ -14,11 +14,7 @@ var x = setInterval(function() {
     document.getElementById("day-count").innerHTML = days + "d " + hours + "h "
     + minutes + "m " + seconds + "s ";
     
-    // If the count down is finished, write some text
-    if (distance < 0) {
-        clearInterval(x);
-        document.getElementById("demo").innerHTML = "EXPIRED";
-    }
+    
 }, 1000)
 
 //Random Name and Age
@@ -48,29 +44,54 @@ function FewAlert() {
 
 //color change
 
-function colorChange() {
+function colorChange(clr) {
     var root = document.querySelector(':root');
+    var className = '.' + clr.classList[1];
+    var classStyles = document.querySelector(className)
     var rootColor = getComputedStyle(root);
-    var brown = ' rgb(255, 235, 201)';
-    var brown0 = 'rgb(255, 235, 201)';
-    var green = ' rgb(212, 236, 221)';
-    var green0 = 'rgb(212, 236, 221)';
-    
-    console.log(rootColor.getPropertyValue('--color-1'));
+    var classColor = getComputedStyle(classStyles);
+    var c1 = ' rgb(255, 235, 201)';
+    var c1_0 = 'rgb(255, 235, 201)';
+    var c2 = ' rgb(229, 228, 204)';
+    var c2_0 = 'rgb(229, 228, 204)';
+    var c3 = ' rgb(248, 237, 227)';
+    var c3_0 = 'rgb(248, 237, 227)';
+    var c4 = ' rgb(212, 236, 221)';
+    var c4_0 = 'rgb(212, 236, 221)';
+    var c5_0 = 'rgb(230, 62, 109)';
 
-    if (rootColor.getPropertyValue('--color-1') == brown || rootColor.getPropertyValue('--color-1') == brown0) {
-        root.style.setProperty('--color-1', 'rgb(212, 236, 221)');
-        root.style.setProperty('--color-2', 'rgb(52, 91, 99)');
-        root.style.setProperty('--color-3', 'rgb(21, 45, 53)');
-        root.style.setProperty('--color-4', 'rgb(17, 32, 49)');
-        root.style.setProperty('--color-change', 'rgb(117, 52, 34)');
-    } else if (rootColor.getPropertyValue('--color-1') == green || rootColor.getPropertyValue('--color-1') == green0) {
+    // console.log(clr.classList);
+    console.log(classColor.getPropertyValue('background-color'));
+    console.log(c1_0 == classColor.getPropertyValue('background-color'));
+    
+    // console.log(rootColor.getPropertyValue('--color-1'));
+
+    if (classColor.getPropertyValue('background-color') == c1 || classColor.getPropertyValue('background-color') == c1_0) {
         root.style.setProperty('--color-1', 'rgb(255, 235, 201)');
         root.style.setProperty('--color-2', 'rgb(215, 151, 113)');
         root.style.setProperty('--color-3', 'rgb(176, 91, 59)');
         root.style.setProperty('--color-4', 'rgb(117, 52, 34)');
-        root.style.setProperty('--color-change', 'rgb(17, 32, 49)');
-    }
+    } else if (classColor.getPropertyValue('background-color') == c2 || classColor.getPropertyValue('background-color') == c2_0) {
+        root.style.setProperty('--color-1', 'rgb(229, 228, 204)');
+        root.style.setProperty('--color-2', 'rgb(186, 199, 167)');
+        root.style.setProperty('--color-3', 'rgb(136, 158, 129)');
+        root.style.setProperty('--color-4', 'rgb(105, 132, 116)');
+    } else if (classColor.getPropertyValue('background-color') == c3 || classColor.getPropertyValue('background-color') == c3_0) {
+        root.style.setProperty('--color-1', 'rgb(248, 237, 227)');
+        root.style.setProperty('--color-2', 'rgb(189, 210, 182)');
+        root.style.setProperty('--color-3', 'rgb(162, 178, 159)');
+        root.style.setProperty('--color-4', 'rgb(121, 135, 119)');
+    } else if (classColor.getPropertyValue('background-color') == c4 || classColor.getPropertyValue('background-color') == c4_0) {
+        root.style.setProperty('--color-1', 'rgb(212, 236, 221)');
+        root.style.setProperty('--color-2', 'rgb(52, 91, 99)');
+        root.style.setProperty('--color-3', 'rgb(21, 45, 53)');
+        root.style.setProperty('--color-4', 'rgb(17, 32, 49)');
+    } else if (classColor.getPropertyValue('background-color') == c5_0) {
+        root.style.setProperty('--color-1', 'white');
+        root.style.setProperty('--color-2', 'rgb(180, 43, 81)');
+        root.style.setProperty('--color-3', 'rgb(125, 25, 53)');
+        root.style.setProperty('--color-4', 'rgb(66, 5, 22)');
+    } 
 }
 
 //button

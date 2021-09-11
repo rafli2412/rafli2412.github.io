@@ -44,8 +44,29 @@
         <ion-icon name="close-outline" class="close"></ion-icon>
     </div>
 
-    <div class="toggle color" onclick="colorChange()">
-
+    <div class="toggle color" >
+        <ion-icon name="color-filter-outline" class="open"></ion-icon>
+        <ion-icon name="close-outline" class="close"></ion-icon><br>
+    </div>
+    
+    <div class="color-pallete">
+        <ul>
+            <div class="color c1" onclick="colorChange(this)">
+    
+            </div><br>
+            <div class="color c2" onclick="colorChange(this)">
+    
+            </div><br>
+            <div class="color c3" onclick="colorChange(this)">
+    
+            </div><br>
+            <div class="color c4" onclick="colorChange(this)">
+    
+            </div><br>
+            <div class="color c5" onclick="colorChange(this)">
+    
+            </div>
+        </ul>
     </div>
 
     <div class="content" id="home">
@@ -451,8 +472,11 @@
 <script>
 
     let menuToggle = document.querySelector('.toggle');
+    let menuToggleColor = document.querySelector('.toggle.color')
+    let colorPallete = document.querySelector('.color-pallete')
     let navigation = document.querySelector('.navigation');
     let content = document.querySelectorAll('.content');
+
     menuToggle.onclick = function() {
         menuToggle.classList.toggle('active');
         navigation.classList.toggle('active');
@@ -461,6 +485,11 @@
         for (i=0; i<content.length; i++) {
             content[i].classList.toggle('active');
         }
+    }
+
+    menuToggleColor.onclick = function() {
+        menuToggleColor.classList.toggle('sub-active');
+        colorPallete.classList.toggle('active');
     }
 
     //active
@@ -529,8 +558,8 @@
                 break;
             case 6:
                 day = "Saturday";
-                quotesArray[0] = "First thing to do before you do something, is to believe to yourself that you can do it. See it in your mind. Imagine how it is finished before you start out.";
-                quotesArray[1] = "I always admire the endeavor you put on something. It may often not the best, but I know you've done your best";
+                quotesArray[0] = "First thing to do before you do something, is to belive to yourself that you can do it. See it in your mind. Imagine how it is finished before you start out.";
+                quotesArray[1] = "I always admire the endeavor you put on something. It may often not the best, but I know you've done yor best";
 
                 random = Math.floor(Math.random() * quotesArray.length);
                 quotes = quotesArray[random];
