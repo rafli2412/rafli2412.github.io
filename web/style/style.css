@@ -440,7 +440,7 @@ img#syf {
     padding-left: 10px;
     padding-right: 10px;
     border-radius: 10px;
-    border: 2px solid brown;
+    border: 2px solid var(--color-4);
     background-color: var(--color-2);
     width: 100%;
     height: 300px;
