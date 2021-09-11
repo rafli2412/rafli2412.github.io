@@ -59,10 +59,11 @@ function colorChange(clr) {
     var c4 = ' rgb(212, 236, 221)';
     var c4_0 = 'rgb(212, 236, 221)';
     var c5_0 = 'rgb(230, 62, 109)';
+    var c6_0 = 'rgb(161, 155, 150)';
 
     // console.log(clr.classList);
     console.log(classColor.getPropertyValue('background-color'));
-    console.log(c1_0 == classColor.getPropertyValue('background-color'));
+    console.log(c6_0 == classColor.getPropertyValue('background-color'));
     
     // console.log(rootColor.getPropertyValue('--color-1'));
 
@@ -91,7 +92,12 @@ function colorChange(clr) {
         root.style.setProperty('--color-2', 'rgb(180, 43, 81)');
         root.style.setProperty('--color-3', 'rgb(125, 25, 53)');
         root.style.setProperty('--color-4', 'rgb(66, 5, 22)');
-    } 
+    } else if (classColor.getPropertyValue('background-color') == c6_0) {
+        root.style.setProperty('--color-1', 'rgb(161,155,150)');
+        root.style.setProperty('--color-2', 'rgb(133,119,100)');
+        root.style.setProperty('--color-3', 'rgba(39,42,31,255)');
+        root.style.setProperty('--color-4', 'rgb(40,61,56)');
+    }
 }
 
 //button
