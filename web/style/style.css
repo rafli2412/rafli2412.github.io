@@ -9,12 +9,12 @@
 }
 
 :root {
-    --color-1 : rgb(255, 235, 201);
-    --color-2 : rgb(215, 151, 113);
-    --color-3 : rgb(176, 91, 59);
-    --color-4 : rgb(117, 52, 34);
+    --color-1 : rgb(231, 212, 181);
+    --color-2 : rgb(222, 186, 157);
+    --color-3 : rgb(125, 90, 80);
+    --color-4 : rgb(187, 135, 96);
 
-    --color-change : rgb(17, 32, 49);
+    --color-font : black;
 }
 
 html {
@@ -53,6 +53,7 @@ body {
     background: var(--color-3);
     transition: 0.5s;
     overflow-x: hidden;
+    z-index: 100;
 }
 
 .navigation.active {
@@ -158,6 +159,10 @@ body {
     height: 350px;
 }
 
+.color-pallete::-webkit-scrollbar {
+    display: none;
+}
+
 .color-pallete .color {
     width: 40px;
     height: 40px;
@@ -165,7 +170,7 @@ body {
 }
 
 .color-pallete .color.c1 {
-    background: rgb(255, 235, 201);
+    background: rgb(187, 135, 96);
 }
 
 .color-pallete .color.c2 {
@@ -181,7 +186,7 @@ body {
 }
 
 .color-pallete .color.c5 {
-    background: rgb(230, 62, 109);
+    background: rgb(198, 180, 206);
 }
 
 .color-pallete .color.c6 {
@@ -501,6 +506,7 @@ img#syf {
 }
 
 .card .icon i {
+    color: var(--color-font);
     font-size: 6rem;
     transition: 0.5s;
 }

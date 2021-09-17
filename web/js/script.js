@@ -50,53 +50,59 @@ function colorChange(clr) {
     var classStyles = document.querySelector(className)
     var rootColor = getComputedStyle(root);
     var classColor = getComputedStyle(classStyles);
-    var c1 = ' rgb(255, 235, 201)';
-    var c1_0 = 'rgb(255, 235, 201)';
+    var c1 = ' rgb(187, 135, 96)';
+    var c1_0 = 'rgb(187, 135, 96)';
     var c2 = ' rgb(229, 228, 204)';
     var c2_0 = 'rgb(229, 228, 204)';
     var c3 = ' rgb(248, 237, 227)';
     var c3_0 = 'rgb(248, 237, 227)';
     var c4 = ' rgb(212, 236, 221)';
     var c4_0 = 'rgb(212, 236, 221)';
-    var c5_0 = 'rgb(230, 62, 109)';
+    var c5_0 = 'rgb(198, 180, 206)';
     var c6_0 = 'rgb(161, 155, 150)';
 
     // console.log(clr.classList);
-    console.log(classColor.getPropertyValue('background-color'));
-    console.log(c6_0 == classColor.getPropertyValue('background-color'));
+    // console.log(classColor.getPropertyValue('background-color'));
+    // console.log(c6_0 == classColor.getPropertyValue('background-color'));
     
     // console.log(rootColor.getPropertyValue('--color-1'));
 
     if (classColor.getPropertyValue('background-color') == c1 || classColor.getPropertyValue('background-color') == c1_0) {
-        root.style.setProperty('--color-1', 'rgb(255, 235, 201)');
-        root.style.setProperty('--color-2', 'rgb(215, 151, 113)');
-        root.style.setProperty('--color-3', 'rgb(176, 91, 59)');
-        root.style.setProperty('--color-4', 'rgb(117, 52, 34)');
+        root.style.setProperty('--color-1', 'rgb(231, 212, 181)');
+        root.style.setProperty('--color-2', 'rgb(222, 186, 157)');
+        root.style.setProperty('--color-3', 'rgb(125, 90, 80)');
+        root.style.setProperty('--color-4', 'rgb(187, 135, 96)');
+        root.style.setProperty('--color-font', 'black');
     } else if (classColor.getPropertyValue('background-color') == c2 || classColor.getPropertyValue('background-color') == c2_0) {
         root.style.setProperty('--color-1', 'rgb(229, 228, 204)');
         root.style.setProperty('--color-2', 'rgb(186, 199, 167)');
         root.style.setProperty('--color-3', 'rgb(136, 158, 129)');
         root.style.setProperty('--color-4', 'rgb(105, 132, 116)');
+        root.style.setProperty('--color-font', 'black');
     } else if (classColor.getPropertyValue('background-color') == c3 || classColor.getPropertyValue('background-color') == c3_0) {
         root.style.setProperty('--color-1', 'rgb(248, 237, 227)');
         root.style.setProperty('--color-2', 'rgb(189, 210, 182)');
         root.style.setProperty('--color-3', 'rgb(162, 178, 159)');
         root.style.setProperty('--color-4', 'rgb(121, 135, 119)');
+        root.style.setProperty('--color-font', 'black');
     } else if (classColor.getPropertyValue('background-color') == c4 || classColor.getPropertyValue('background-color') == c4_0) {
         root.style.setProperty('--color-1', 'rgb(212, 236, 221)');
         root.style.setProperty('--color-2', 'rgb(52, 91, 99)');
         root.style.setProperty('--color-3', 'rgb(21, 45, 53)');
         root.style.setProperty('--color-4', 'rgb(17, 32, 49)');
+        root.style.setProperty('--color-font', 'white');
     } else if (classColor.getPropertyValue('background-color') == c5_0) {
-        root.style.setProperty('--color-1', 'white');
-        root.style.setProperty('--color-2', 'rgb(180, 43, 81)');
-        root.style.setProperty('--color-3', 'rgb(125, 25, 53)');
-        root.style.setProperty('--color-4', 'rgb(66, 5, 22)');
+        root.style.setProperty('--color-1', 'rgb(241, 241, 246)');
+        root.style.setProperty('--color-2', 'rgb(198, 180, 206)');
+        root.style.setProperty('--color-3', 'rgb(155, 114, 170)');
+        root.style.setProperty('--color-4', 'rgb(60, 81, 134)');
+        root.style.setProperty('--color-font', 'white');
     } else if (classColor.getPropertyValue('background-color') == c6_0) {
         root.style.setProperty('--color-1', 'rgb(161,155,150)');
         root.style.setProperty('--color-2', 'rgb(133,119,100)');
         root.style.setProperty('--color-3', 'rgba(39,42,31,255)');
         root.style.setProperty('--color-4', 'rgb(40,61,56)');
+        root.style.setProperty('--color-font', 'white');
     }
 }
 
