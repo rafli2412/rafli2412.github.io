@@ -68,9 +68,9 @@ function colorChange(clr) {
     // console.log(rootColor.getPropertyValue('--color-1'));
 
     if (classColor.getPropertyValue('background-color') == c1 || classColor.getPropertyValue('background-color') == c1_0) {
-        root.style.setProperty('--color-1', 'rgb(231, 212, 181)');
+        root.style.setProperty('--color-1', 'rgb(255, 235, 201)');
         root.style.setProperty('--color-2', 'rgb(222, 186, 157)');
-        root.style.setProperty('--color-3', 'rgb(125, 90, 80)');
+        root.style.setProperty('--color-3', 'rgb(176, 91, 59)');
         root.style.setProperty('--color-4', 'rgb(187, 135, 96)');
         root.style.setProperty('--color-font', 'black');
     } else if (classColor.getPropertyValue('background-color') == c2 || classColor.getPropertyValue('background-color') == c2_0) {
