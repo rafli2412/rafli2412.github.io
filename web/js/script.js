@@ -1,4 +1,5 @@
-var countDate = new Date ("May 16, 2021 03:06:00").getTime();
+// var countDate = new Date ("May 16, 2021 03:06:00").getTime();
+var countDate = new Date ("May 23, 2021 20:00:00").getTime();
 
 var x = setInterval(function() {
     var now = new Date().getTime();
@@ -21,11 +22,14 @@ var x = setInterval(function() {
 var birthDate = new Date ("May 06, 2001 00:00:01").getTime();
 const nameSyifa = ["Syifa Meidiana", "सिफ़ा मीडियाना", "시파 메이디아나", "シファ", "西法·梅迪亚纳", "西法·梅迪亞納", "سيفا ميديانا", "ซิฟา เมเดียนา", "ស៊ីហ្វាហ្វាមេឌីយ៉ាណា", "шифа"];
 
+
 var y = setInterval(function() {
         var now = new Date().getTime();
 
         var days = now - birthDate;
         var Age = Math.floor(days / (1000 * 60 * 60 * 24 * 365));
+        console.log(days / (1000 * 60 * 60 * 24))
+
 
         const random = Math.floor(Math.random() * nameSyifa.length);
         document.getElementById("name").innerHTML = nameSyifa[random] + ", " + Age;
