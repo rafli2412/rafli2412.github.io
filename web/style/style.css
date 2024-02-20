@@ -405,6 +405,14 @@ img#syf {
     transition: 0.5s;
 }
 
+.wrapper .item .img.special1000 {
+    border: solid var(--color-3) 7px;
+    width: 95%;
+    height: 95%;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
 .wrapper .item .img:hover {
     transform: scale(1.05);
 }
@@ -551,5 +559,4 @@ img#syf {
     .content.active {
         width: 250px;
     }
-
 }
