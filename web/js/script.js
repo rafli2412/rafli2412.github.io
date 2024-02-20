@@ -1,5 +1,5 @@
-// var countDate = new Date ("May 16, 2021 03:06:00").getTime();
-var countDate = new Date ("May 23, 2021 20:00:00").getTime();
+var countDate = new Date ("May 16, 2021 03:06:00").getTime();
+// var countDate = new Date ("May 23, 2021 20:00:00").getTime();
 
 var x = setInterval(function() {
     var now = new Date().getTime();
