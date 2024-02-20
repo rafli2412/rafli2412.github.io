@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meidiana - 6 05 2001</title>
+    <link rel="stylesheet" type="text/css" href="style/style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="icon" href="img/icon.png">
+</head>
+<body>
+    <div class="navigation">
+        <ul>
+            <li class="list">
+                <a href="#home">
+                    <span class="icon"><ion-icon name="home-outline"></ion-icon></span>
+                    <span class="title">Home</span>
+                </a>
+            </li>
+            <li class="list">
+                <a href="#profile">
+                    <span class="icon"><ion-icon name="person-outline"></ion-icon></span>
+                    <span class="title">Profile</span>
+                </a>
+            </li>
+            <li class="list">
+                <a href="#gallery">
+                    <span class="icon"><ion-icon name="image-outline"></ion-icon></span>
+                    <span class="title">Gallery</span>
+                </a>
+            </li>
+            <li class="list">
+                <a href="#note">
+                    <span class="icon"><ion-icon name="book-outline"></ion-icon></span>
+                    <span class="title">Note</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+
+    <div class="toggle">
+        <ion-icon name="grid-outline" class="open"></ion-icon>
+        <ion-icon name="close-outline" class="close"></ion-icon>
+    </div>
+
+    <div class="toggle color" >
+        <ion-icon name="color-filter-outline" class="open"></ion-icon>
+        <ion-icon name="close-outline" class="close"></ion-icon><br>
+    </div>
+    
+    <div class="color-pallete">
+        <ul>
+            <div class="color c1" onclick="colorChange(this)">
+    
+            </div><br>
+            <div class="color c2" onclick="colorChange(this)">
+    
+            </div><br>
+            <div class="color c3" onclick="colorChange(this)">
+    
+            </div><br>
+            <div class="color c4" onclick="colorChange(this)">
+    
+            </div><br>
+            <div class="color c5" onclick="colorChange(this)">
+    
+            </div><br>
+            <div class="color c6" onclick="colorChange(this)">
+    
+            </div>
+        </ul>
+    </div>
+
+    <div class="content" id="home">
+        <div style="grid-column: 1 / 3;">
+            <center style="font-family: 'Cabin', sans-serif;
+            font-size: 60px;">
+                Hello There! My Favorite Person 🥰
+            </center>
+        </div><br>
+        <div id="day" style="font-size: 35px;
+        grid-column: 1 / 3;">
+            Today is
+        </div>
+
+        <fieldset style="grid-column: 1 / 3;">
+            <legend style="margin-left: 5px;">today's quote:</legend>
+            <p id="quotes"></p>
+        </fieldset>
+
+        <div class="day-count" style="grid-column: 1 / 3;">
+            <center>
+                <p id="day-count">How Long has it been?</p>
+            </center>
+        </div>
+
+        <div style="grid-column: 1 / 3;">
+            <center>
+                <button id="btn1" onclick="FewAlert()" onmouseover="buttonChangeOver()" onmouseout="buttonChangeOut()">HmmMmm...</button>
+            </center>
+        </div>
+    </div><br><br><br><br>
+
+    <div class="content" id="profile">
+        <div style="grid-column: 1 / 3;">
+            <center style="font-family: 'Cabin', sans-serif;
+            font-size: 60px;">
+                Well, you know me heheh.
+            </center>
+        </div><br>
+        <div style="grid-column: 1 / 3;">
+            <center>
+                <img src="img/syf.png" alt="" id="syf">
+            </center><br>
+            <center>
+               <p id="name" style="font-size: 20px;
+               height: 1em;"></p>
+               <p style="font-size: 12px;"><br>
+                It's Syifa Meidiana, actually.</p>
+            </center><br><br>
+        </div>
+        
+
+        <!-- Skills -->
+        <div class="skill-container">
+            <div class="skill-data">
+                <ion-icon name="happy-outline"></ion-icon>
+                <span class="skill-name">Funny</span>
+                <span class="skill-percentage">95%</span>
+                <div class="skill-bar skill-funny"></div>
+            </div>
+
+
+            <div class="skill-data">
+                <ion-icon name="heart-outline"></ion-icon>
+                <span class="skill-name">Cute</span>
+                <span class="skill-percentage">100%</span>
+                <div class="skill-bar skill-cute"></div>
+            </div>
+            
+
+            <div class="skill-data">
+                <ion-icon name="bandage-outline"></ion-icon>
+                <span class="skill-name">Caring</span>
+                <span class="skill-percentage">85%</span>
+                <div class="skill-bar skill-care"></div>
+            </div>
+            
+
+            <div class="skill-data">
+                <ion-icon name="ribbon-outline"></ion-icon>
+                <span class="skill-name">Smart</span>
+                <span class="skill-percentage">90%</span>
+                <div class="skill-bar skill-smart"></div>
+            </div>
+            
+
+            <div class="skill-data">
+                <ion-icon name="volume-high-outline"></ion-icon>
+                <span class="skill-name">Annoying</span>
+                <span class="skill-percentage">50%</span>
+                <div class="skill-bar skill-annoy"></div>
+            </div>
+            
+
+            <div class="skill-data">
+                <ion-icon name="thunderstorm-outline"></ion-icon>
+                <span class="skill-name">Grumpy</span>
+                <span class="skill-percentage">70%</span>
+                <div class="skill-bar skill-grumpy"></div>
+            </div>
+
+            <div class="skill-data">
+                <ion-icon name="battery-dead-outline"></ion-icon>
+                <span class="skill-name">Laziness</span>
+                <span class="skill-percentage">45%</span>
+                <div class="skill-bar skill-lazy"></div>
+            </div>
+            
+        </div>
+
+        
+        <div style="margin-left: 20px;">
+            <div>
+                <span class="profile-left">Aliases</span> : <span>'Sipp', 'Cipa', 'Sipaaa', 'Mbul', '👍'.</span>
+            </div><br>
+
+            <div>
+                <span class="profile-left">Doesn't want to be called</span> : 'Mei'.
+            </div><br>
+
+            <div>
+                <span class="profile-left">Born</span> : Pontianak
+            </div><br>
+
+            <div>
+                <span class="profile-left">Born Date</span> : May 6, 2001
+            </div><br>
+
+            <div>
+                <span class="profile-left">Hobbies</span> : Cylcling, Wrestling(?), Movie Watching, Web Surfing, and of course, <span style="font-family: 'Cabin', sans-serif;
+                font-family: 'Style Script', cursive;">Procrastinating</span> &gt;_&lt;
+            </div><br>
+
+            <div>
+                <span class="profile-left">Colors</span> : <span style="color: rgb(117, 52, 34);
+                font-family: 'Cabin', sans-serif;">Brown</span>, <span style="color: rgb(17, 32, 49);
+                font-family: 'Cabin', sans-serif;">Sage Green</span>, and prefer <span style="font-weight: 900;
+                font-family: 'Cabin', sans-serif;">Darker </span> Colors.
+            </div><br>
+
+            <div style="text-align: center;">
+                Furthermore, Syifa is a good person. A great companion too, 'cause she never ignores you when you're with her. She also talks very frankly about herself. And she dresses nice. Overall she's a 10/10 person to hang out with.
+            </div>
+        </div>
+    </div><br><br><br><br>
+
+    <div class="content" id="gallery">
+        <div style="grid-column: 1 / 3;">
+            <center style="font-family: 'Cabin', sans-serif;
+            font-size: 55px;">
+                Set of Frames for Remembering you.
+            </center>
+            <center style="font-family: 'Cabin', sans-serif;
+            font-size: 12px;">
+                Use [SHIFT + SCROLL] to scroll
+            </center>
+        </div><br>
+
+        <div style="grid-column: 1 / 3;">
+            <center>
+                U S
+            </center>
+        </div><br>
+        
+        <div class="wrapper" style="grid-column: 1 / 3;" id="image">
+            <div class="item"><img class="img special1000" src="img/thumbnail/35.jpeg" alt="" onclick="expandImg(this)"></div>
+            <div class="item"><img class="img special1000" src="img/thumbnail/34.jpeg" alt="" onclick="expandImg(this)"></div>
+            <div class="item"><img class="img special1000" src="img/thumbnail/33.jpeg" alt="" onclick="expandImg(this)"></div>
+            <div class="item"><img class="img" src="img/thumbnail/24.jpeg" alt="" onclick="expandImg(this)"></div>
+            <div class="item"><img class="img" src="img/thumbnail/25.jpeg" alt="" onclick="expandImg(this)"></div>
+            <div class="item"><img class="img" src="img/thumbnail/26.jpeg" alt="" onclick="expandImg(this)"></div>
+            <div class="item"><img class="img" src="img/thumbnail/27.jpeg" alt="" onclick="expandImg(this)"></div>
+            <div class="item"><img class="img" src="img/thumbnail/28.jpeg" alt="" onclick="expandImg(this)"></div>
+            <div class="item"><img class="img" src="img/thumbnail/29.jpeg" alt="" onclick="expandImg(this)"></div>
+            <div class="item"><img class="img" src="img/thumbnail/30.jpeg" alt="" onclick="expandImg(this)"></div>
+            <div class="item"><img class="img" src="img/thumbnail/31.jpeg" alt="" onclick="expandImg(this)"></div>
+            <div class="item"><img class="img" src="img/thumbnail/1.jpeg" alt="" onclick="expandImg(this)"></div>
+            <div class="item"><img class="img" src="img/thumbnail/2.jpeg" alt="" onclick="expandImg(this)"></div>
+            <div class="item"><img class="img" src="img/thumbnail/3.jpeg" alt="" onclick="expandImg(this)"></div>
+            <div class="item"><img class="img" src="img/thumbnail/4.jpeg" alt="" onclick="expandImg(this)"></div>
+            <div class="item"><img class="img" src="img/thumbnail/5.jpeg" alt="" onclick="expandImg(this)"></div>
+            <div class="item"><img class="img" src="img/thumbnail/6.jpeg" alt="" onclick="expandImg(this)"></div>
+            <div class="item"><img class="img" src="img/thumbnail/7.jpeg" alt="" onclick="expandImg(this)"></div>
+            <div class="item"><img class="img" src="img/thumbnail/8.jpeg" alt="" onclick="expandImg(this)"></div>
+            <div class="item"><img class="img" src="img/thumbnail/9.jpeg" alt="" onclick="expandImg(this)"></div>
+            <div class="item"><img class="img" src="img/thumbnail/10.jpeg" alt="" onclick="expandImg(this)"></div>
+            <div class="item"><img class="img" src="img/thumbnail/11.jpeg" alt="" onclick="expandImg(this)"></div>
+            <div class="item"><img class="img" src="img/thumbnail/12.jpeg" alt="" onclick="expandImg(this)"></div>
+            <div class="item"><img class="img" src="img/thumbnail/13.jpeg" alt="" onclick="expandImg(this)"></div>
+            <div class="item"><img class="img" src="img/thumbnail/14.jpeg" alt="" onclick="expandImg(this)"></div>
+            <div class="item"><img class="img" src="img/thumbnail/15.jpeg" alt="" onclick="expandImg(this)"></div>
+            <div class="item"><img class="img" src="img/thumbnail/16.jpeg" alt="" onclick="expandImg(this)"></div>
+            <div class="item"><img class="img" src="img/thumbnail/17.jpeg" alt="" onclick="expandImg(this)"></div>
+            <div class="item"><img class="img" src="img/thumbnail/18.jpeg" alt="" onclick="expandImg(this)"></div>
+            <div class="item"><img class="img" src="img/thumbnail/19.jpeg" alt="" onclick="expandImg(this)"></div>
+            <div class="item"><img class="img" src="img/thumbnail/20.jpeg" alt="" onclick="expandImg(this)"></div>
+            <div class="item"><img class="img" src="img/thumbnail/21.jpeg" alt="" onclick="expandImg(this)"></div>
+            <div class="item"><img class="img" src="img/thumbnail/22.jpeg" alt="" onclick="expandImg(this)"></div>
+            <div class="item"><img class="img" src="img/thumbnail/23.jpeg" alt="" onclick="expandImg(this)"></div>
+
+            <!-- <div class="item"><img class="img" src="img/thumbnail/24.jpeg" alt="" onclick="expandImg(this)"></div> -->
+        </div>
+
+        <div class="img-container" style="grid-column: 1 / 2;">
+            <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+            <img id="expandedImg" style="width: 100%;">
+        </div>
+
+        <div class="img-container" style="grid-column: 2 / 3;
+        margin-left: 10px;">
+            <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+            <img id="expandedImg2" style="width: 100%;">
+        </div><br>
+
+        <div style="grid-column: 1 / 3;">
+            <center>
+                Y O U
+            </center>
+        </div><br>
+
+        <div id="imageSyifa" class="wrapper" style="grid-column: 1 / 3;
+        display: flex;
+        flex-direction: row-reverse;">
+            <div class="item"><img class="img special1000" src="img/thumbnail/s33.jpeg" alt="" onclick="expandImg2(this)"></div>
+            <div class="item"><img class="img special1000" src="img/thumbnail/s32.jpeg" alt="" onclick="expandImg2(this)"></div>
+            <div class="item"><img class="img" src="img/thumbnail/s27.jpeg" alt="" onclick="expandImg2(this)"></div>
+            <div class="item"><img class="img" src="img/thumbnail/s28.jpeg" alt="" onclick="expandImg2(this)"></div>
+            <div class="item"><img class="img" src="img/thumbnail/s29.jpeg" alt="" onclick="expandImg2(this)"></div>
+            <div class="item"><img class="img" src="img/thumbnail/s30.jpeg" alt="" onclick="expandImg2(this)"></div>
+            <div class="item"><img class="img" src="img/thumbnail/s31.jpeg" alt="" onclick="expandImg2(this)"></div>
+            <div class="item"><img class="img" src="img/thumbnail/s1.jpeg" alt="" onclick="expandImg2(this)"></div>
+            <div class="item"><img class="img" src="img/thumbnail/s2.jpeg" alt="" onclick="expandImg2(this)"></div>
+            <div class="item"><img class="img" src="img/thumbnail/s3.jpeg" alt="" onclick="expandImg2(this)"></div>
+            <div class="item"><img class="img" src="img/thumbnail/s4.jpeg" alt="" onclick="expandImg2(this)"></div>
+            <!-- <div class="item"><img class="img" src="img/thumbnail/s5.jpeg" alt="" onclick="expandImg2(this)"></div> -->
+            <!-- <div class="item"><img class="img" src="img/thumbnail/s6.jpeg" alt="" onclick="expandImg2(this)"></div> -->
+            <!-- <div class="item"><img class="img" src="img/thumbnail/s7.jpeg" alt="" onclick="expandImg2(this)"></div> -->
+            <div class="item"><img class="img" src="img/thumbnail/s8.jpeg" alt="" onclick="expandImg2(this)"></div>
+            <!-- <div class="item"><img class="img" src="img/thumbnail/s9.jpeg" alt="" onclick="expandImg2(this)"></div> -->
+            <div class="item"><img class="img" src="img/thumbnail/s10.jpeg" alt="" onclick="expandImg2(this)"></div>
+            <div class="item"><img class="img" src="img/thumbnail/s11.jpeg" alt="" onclick="expandImg2(this)"></div>
+            <!-- <div class="item"><img class="img" src="img/thumbnail/s12.jpeg" alt="" onclick="expandImg2(this)"></div> -->
+            <div class="item"><img class="img" src="img/thumbnail/s13.jpeg" alt="" onclick="expandImg2(this)"></div>
+            <!-- <div class="item"><img class="img" src="img/thumbnail/s14.jpeg" alt="" onclick="expandImg2(this)"></div> -->
+            <!-- <div class="item"><img class="img" src="img/thumbnail/s15.jpeg" alt="" onclick="expandImg2(this)"></div> -->
+            <!-- <div class="item"><img class="img" src="img/thumbnail/s16.jpeg" alt="" onclick="expandImg2(this)"></div> -->
+            <div class="item"><img class="img" src="img/thumbnail/s17.jpeg" alt="" onclick="expandImg2(this)"></div>
+            <div class="item"><img class="img" src="img/thumbnail/s18.jpeg" alt="" onclick="expandImg2(this)"></div>
+            <!-- <div class="item"><img class="img" src="img/thumbnail/s19.jpeg" alt="" onclick="expandImg2(this)"></div> -->
+            <div class="item"><img class="img" src="img/thumbnail/s20.jpeg" alt="" onclick="expandImg2(this)"></div>
+            <div class="item"><img class="img" src="img/thumbnail/s21.jpeg" alt="" onclick="expandImg2(this)"></div>
+            <div class="item"><img class="img" src="img/thumbnail/s22.jpeg" alt="" onclick="expandImg2(this)"></div>
+            <div class="item"><img class="img" src="img/thumbnail/s23.jpeg" alt="" onclick="expandImg2(this)"></div>
+            <!-- <div class="item"><img class="img" src="img/thumbnail/s24.jpeg" alt="" onclick="expandImg2(this)"></div> -->
+            <div class="item"><img class="img" src="img/thumbnail/s25.jpeg" alt="" onclick="expandImg2(this)"></div>
+            <div class="item"><img class="img" src="img/thumbnail/s26.jpeg" alt="" onclick="expandImg2(this)"></div>
+        </div>
+        
+        
+    </div><br><br><br><br>
+
+    <div class="content" id="note">
+        <div style="grid-column: 1 / 4;">
+            <center style="font-family: 'Cabin', sans-serif;
+            font-size: 55px;">
+                Some Thoughts.
+            </center>
+
+            <center style="font-family: 'Cabin', sans-serif;
+            font-size: 15px;">
+                Click the Icon to Expand or Shrink
+            </center><br>
+        </div>
+
+        <div class="card">
+            <div class="icon-container">
+                <span class="icon">
+                    <i class="material-icons">star_half</i>
+                </span>
+            </div>
+
+            <div class="card-title">
+                Sun and Moon
+            </div>
+
+            <div class="card-content">
+                In this wide and vast universe, figures two entities that play a key-role toward the existence of the universe itself. They’re the sun and moon. The Sun, is so attractive. She literally surrounded by lots of planets and only divided by distances. She’s so big and enlighten all of her surroundings. Her light ray utters existence to variety of souls. As we live, the Sun gave too much to us for us to return it to her. <br><br>
+
+                For the Moon, he’s known for his shyness. Compared to the sun, He’s too dwarf for her. He just shined his brightest when no one was around to see. He even still attached and circumambulate the Earth to exist. He does useful though, but selective. Most of his existence only affect on certain entities. The Moon is nothing compared to Sun. Even the Sun that illuminates the moon. <br><br>
+
+                The Sun and Moon. Is You and Me. Like the moon, I feel so grateful that you always ‘shine’ through me and show me that, even with all my flaws I still have reason to exist. Like the Sun, you’ve been so useful to many, but it’s often makes your ‘ray’ become dim. Until you realize from me that, it’s okay to dim a little bit of your light to keep the light spark inside of you. And just like the Sun and Moon, just let your light come shining through; and when the dark night comes, I’ll shine the light right back to you. <br><br>
+
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="icon-container">
+                <span class="icon">
+                    <i class="material-icons">polymer</i>
+                </span>
+            </div>
+
+            <div class="card-title">
+                Her
+            </div>
+
+            <div class="card-content">
+                Where do I start? Um, at first she’s too cold to anyone. She behaves ignorant to anybody else, just like a snake spits her venom to protect her from transgressor. She even responds your text by her mood haha, and if you’re lucky, you only get one or two words per respond. Based on that, she has an impenetrable heart that makes her feel selective to let someone to her to settle in her life. Based on that, I know that she has always been loyal to me, ‘cause lucky me, I still got some room in her concrete-dense heart and complex mind. I’m grateful for that. <br><br>
+
+                She’s addictive you know, and I’m talking about both ways. With her clinginess to me, she shows me how much she loves me in a really really big way. And for me, I see her as a medicine. A remedy to remember who I am, added by her tangible touch that can make me feel how to respect all the good things that happen.  I’ve finally found what Prophet Muhammad means about the best woman. “Simply, just by seeing her, you feel charmed.”<br><br>
+
+                I’m also admired her never-ending struggle. Sometimes, life pushes her hard, but she always gets up and fights it. No matter how bad the obstacle is, she never felt defeated. Which I’ve always felt. She’s strong like no one else. That’s why I feel safe when I’m around her. <br><br>
+
+                Well, she really not the kind who will promise you a world, no. But she’s here, always on my side. Yes, she is home. And for the first time, I know when I’m with her, I have no doubt about what’s to come. <br><br> 
+
+                <center>
+                    Thank You, Syifa.
+                </center><br><br>
+
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="icon-container">
+                <span class="icon">
+                    <i class="material-icons">opacity</i>
+                </span>
+            </div>
+
+            <div class="card-title">
+                Hope
+            </div>
+            <div class="card-content">
+                if you wanna die, you die. but die tomorrow. if it is still hard for you to even tomorrow, die the next day. if it is still painful even the next day, it’s not too late to die the next day after that. <br><br>
+
+                if you live on the day by day like that, a good day will certainly come. the day when you'll be glad that you didn’t kill yourself will come. you had such a hard time so far and it will be too cruel to make you even lose a chance to become happy. <br><br>
+
+                Still, it’s okay for you to cry. It’s okay for you to rest your soul. Time does heal, but not in a wink. So, until that, stay sane, stay healthy, and stay patient. Remember, even a bad day is just 24 hours. <br><br>
+
+            </div>
+        </div>
+        
+        <div class="card">
+            <div class="icon-container">
+                <span class="icon">
+                    <i class="material-icons">add_alarm</i>
+                </span>
+            </div>
+
+            <div class="card-title">
+                25 Hours
+            </div>
+            <div class="card-content">
+                "If I that bad, just leave me." 
+
+                You are grumpy, but still, your beauty always makes people happy. You are my mother. <br><br>
+
+                You're annoying, but still cute and funny when you look at it. You are my little brother. <br><br>
+
+                You are a nuisance, but still, give extra attention and infinite love. You are my first brother. <br><br>
+
+                You are lazy, but still the best competitor and smart in making decisions. You are my brother. <br><br>
+
+                You are tired, but you always hide it with pleasure and never once complain. You are my father. <br><br>
+
+                You are mine. It's ingrained in me and my family. My world is you. <br><br>
+
+                —Forgetting you is killing. <br><br>
+
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="icon-container">
+                <span class="icon">
+                    <i class="material-icons">replay</i>
+                </span>
+            </div>
+
+            <div class="card-title">
+                Demanding
+            </div>
+            <div class="card-content">
+                I do need you all the time. Even though I never asked, too afraid actually. I always ask myself about you. When I ride to nowhere, I always wonder "Am I gonna see you again?" "Is that time will be the last time I saw you?" "Are you even think about me?". That question keeps me focus. Encourage me that I WILL be able to see you again. No matter what I HAVE TO see your face again. And of course, I can't achieve that without your orisons. <br><br>
+
+                Without even asking, you always be there with me. In my mind, my wheels, and my goals. And that's that <br><br>
+
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="icon-container">
+                <span class="icon">
+                    <i class="material-icons">compare_arrows</i>
+                </span>
+            </div>
+
+            <div class="card-title">
+                Distant
+            </div>
+            <div class="card-content">
+                You're out of reach.
+                So far in a lot of aspects, <br><br>
+
+                You're very proficient with rows of achievement, while I'm trying to keep myself sane. <br><br> 
+
+                Generosity and kindness always run in you, while I, don't even care about my entity. <br><br>
+
+                And God always bestows bless upon thee 'cause thy never absent beseech the lord, while I'm still lost in solitude. <br><br>
+
+                Thank God, the perfect soul you are still squired the ashen one.
+                You're a revelation.
+                Knowing you is bliss.
+                Even though we're not running alongside each other. <br><br>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="icon-container">
+                <span class="icon">
+                    <i class="material-icons">fiber_smart_record
+                        </i>
+                </span>
+            </div>
+
+            <div class="card-title">
+                Rasian
+            </div>
+            <div class="card-content">
+                Pernahkan kau bermimpi tentang menjelajahi belahan bumi tanpa mengenal waktu bersama dia? Iya, dia yang padahal tidak sedetikpun terlintas di kepalamu yang komplek akan pikiran-pikiran. Bagaimana mimpi ini bisa terjadi? Dan mengapa mimpi ini sangat berbekas di hati? Mungkin saja, di kala penat dan beratnya keseharianmu, Dia selalu memikirkanmu. Mengkhawatirkan Kesehatan yang harus terus bertahan menghadapi segala rintangan. Serta, menjadi yang pertama untuk bangga pada hasil yang telah kau peroleh karena yang terpenting kau telah mencapainya walaupun gelisah saat melakukannya. Iya, dia candu terhadapmu, memikirkanmu membuat otaknya tetap sehat. Dan karena terbatasnya kesempatan tetapi selalu ingin bersamamu, menghayal tentangmu sudah cukup. Dengan bantuan semesta, mungkin saja mimpi itu merupakan sebuah tanda darinya seberapa sayangnya dia denganmu.<br><br>
+
+                Dia berminta untuk kau tetap terus bertahan. Semua orang ingin menggapai mimpi, bukan? Maka bertahanlah, aku ada di sini selalu menunggu. Kapan waktunya kita dapat mewujudkan perjalan mimpi ini. <br><br>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="icon-container">
+                <span class="icon">
+                    <i class="material-icons">1k</i>
+                </span>
+            </div>
+
+            <div class="card-title">
+                1000 Days
+            </div>
+            <div class="card-content">
+                Hello my beautiful girlfriend. It not caught by my attention that we've been together for 1000 Days and Nights. Well, just how fast the times has felt. It's must be clocking faster when I'm spend the times with you. All the ups and downs that we've been through, yet on this day we still holding our oath to be always be on each other side.<br><br>
+
+                I'm fully grateful to accomplish this milestone with you, bub. You've been always be my day one, day zero when I was no one. Always be my sun when my dark times comes and always be grip when I'm on the edge of a hill. Thank you so much bubub. Not much I can do right now to you for doing this to me. But, I want to spend another 1000 day, 1000 months, 1000 years, even 1000 lifetime with you. Happy 1000 days Syifa. <br><br>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="icon-container">
+                <span class="icon">
+                    <i class="material-icons">photo_camera</i>
+                </span>
+            </div>
+
+            <div class="card-title">
+                Catcher
+            </div>
+            <div class="card-content">
+                Have you ever missed something so beautiful on your sight and feel dissapointed when you can perpetuate it? Yes, I often felt that sometimes. But, it was on the past live now, until I met her. Her, who always remember to capture every our sweet moments together. Her gaze on arranging every position is truly unmatchable. With her photograph skills and vision, she always framed our, her, and my moment to something masterpiece. Because of her, every moments feel so special and also immortalize. Sometimes I just looked onto the gallery of everything she captured and I can feel the moment again inside of it. Such a Picasso girlfriend heheh.<br><br>
+
+                Keep on catching every wonderful moments bububbb. So sorry If I sometimes forget to reminds us to take a photo whenever we're together. That's because I always sink into our times and enjoy our moment together to the fullest. But, yeah, you were always there to capture it every moment. Thank you so much syifa. So sorry also if I can't properly took a good picture of you. This is not my thing haha. But, I feel I have improved since you taught me everything about photography. So, thanks again ya bubub. <br><br>
+            </div>
+        </div>
+
+        <!-- <div class="card">
+            <div class="icon-container">
+                <span class="icon">
+                    <i class="material-icons"></i>
+                </span>
+            </div>
+
+            <div class="card-title">
+                Lorem
+            </div>
+            <div class="card-content">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut eaque enim sit asperiores at officiis sint porro voluptatibus dolorem eos iste repudiandae, sunt nihil cumque assumenda provident veritatis doloribus tenetur fuga quasi id libero? Ipsam perferendis quaerat doloremque molestias iure nihil, sapiente dignissimos voluptatem qui eum reiciendis. Voluptates, voluptatem praesentium.<br><br>
+            </div>
+        </div> -->
+
+    </div><br><br><br><br>
+
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+<script src="js/script.js"></script>
+
+<script>
+
+    let menuToggle = document.querySelector('.toggle');
+    let menuToggleColor = document.querySelector('.toggle.color')
+    let colorPallete = document.querySelector('.color-pallete')
+    let navigation = document.querySelector('.navigation');
+    let content = document.querySelectorAll('.content');
+
+    menuToggle.onclick = function() {
+        menuToggle.classList.toggle('active');
+        navigation.classList.toggle('active');
+        
+        let i;
+        for (i=0; i<content.length; i++) {
+            content[i].classList.toggle('active');
+        }
+    }
+
+    menuToggleColor.onclick = function() {
+        menuToggleColor.classList.toggle('sub-active');
+        colorPallete.classList.toggle('active');
+    }
+
+    //active
+    let list = document.querySelectorAll('.list');
+    for (let i = 0; i<list.length; i++) {
+        list[i].onclick = function() {
+            let j = 0;
+            while(j<list.length) {
+                list[j++].className = "list";
+            }
+            list[i].className = "list active";
+        }
+    }
+
+    //day n quotes
+        let day;
+        const quotesArray = [];
+        switch (new Date().getDay()) {
+            case 0:
+                day = "Sunday";
+                quotesArray[0] = "You don't just stop loving someone because they don't love you back. You love them because you need them.";
+                quotesArray[1] = "Everything's gonna be okay. Take your time. Charges up. And face it all in your best state.";
+
+                random = Math.floor(Math.random() * quotesArray.length);
+                quotes = quotesArray[random];
+                break;
+            case 1:
+                day = "Monday";
+                quotesArray[0] = "Life is just a piece of paper. But, your touch can color the white.";
+                quotesArray[1] = "To be able to lie at your wings, is the greatest achievment of my life. 'Cause those wings only take me higher and higher.";
+
+                random = Math.floor(Math.random() * quotesArray.length);
+                quotes = quotesArray[random];
+                break;
+            case 2:
+                day = "Tuesday";
+                quotesArray[0] = "Whatever the feeling is, let it be. The more you try to 'fulfill' it, the harder it is. Let the selfish side of the feeling remind us that sometimes we just want to go the way we should.";
+                quotesArray[1] = "Times sure will do us part. But, even still, until then, let's stay together.";
+
+                random = Math.floor(Math.random() * quotesArray.length);
+                quotes = quotesArray[random];
+                break;
+            case 3:
+                day = "Wednesday";
+                quotesArray[0] = "You don't need everyone to love you. Just a few good people.";
+                quotesArray[1] = "You don't have to be better for me, cause I love you for what's you.";
+
+                random = Math.floor(Math.random() * quotesArray.length);
+                quotes = quotesArray[random];
+                break;
+            case 4:
+                day = "Thursday";
+                quotesArray[0] = "Actually the world has so many good people. But, if you can't find one. Be one:)";
+                quotesArray[1] = "Don't waste your time on hating yourself, cause' that's what other people job.";
+
+                random = Math.floor(Math.random() * quotesArray.length);
+                quotes = quotesArray[random];
+                break;
+            case 5:
+                day = "Friday";
+                quotesArray[0] = "Good times arrive when you least expect it. It could be any minute. So, don't fight the tears on your cheek. Because I know you'll find the strength when you're weak.";
+                quotesArray[1] = "You are braver than you are, stronger than you seen, smarter than you think, and better than me";
+
+                random = Math.floor(Math.random() * quotesArray.length);
+                quotes = quotesArray[random];
+                break;
+            case 6:
+                day = "Saturday";
+                quotesArray[0] = "First thing to do before you do something, is to belive to yourself that you can do it. See it in your mind. Imagine how it is finished before you start out.";
+                quotesArray[1] = "I always admire the endeavor you put on something. It may often not the best, but I know you've done yor best";
+
+                random = Math.floor(Math.random() * quotesArray.length);
+                quotes = quotesArray[random];
+                break;
+        }
+        document.getElementById("day").style.fontWeight += "900";
+        document.getElementById("day").innerHTML += day;
+        document.getElementById("quotes").innerHTML = quotes;
+
+</script>
+</body>
+</html>
