@@ -160,3 +160,43 @@ for (let i = 0; i<iconCard.length; i++) {
         card[i].classList.toggle('active');
     }
 }
+
+// Hide/Show Navigation on Scroll
+(function() {
+    let lastScrollTop = 0;
+    const navigation = document.querySelector('.navigation');
+    
+    // Make sure navigation exists
+    if (!navigation) {
+        console.warn('Navigation element not found');
+        return;
+    }
+
+    window.addEventListener('scroll', function() {
+        let currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+        
+        // Scrolling DOWN - Hide nav (add class)
+        if (currentScroll > lastScrollTop && currentScroll > 100) {
+            // Only hide if we're not at the top
+            if (!navigation.classList.contains('nav-hidden')) {
+                navigation.classList.add('nav-hidden');
+            }
+        } 
+        // Scrolling UP - Show nav (remove class)
+        else if (currentScroll < lastScrollTop) {
+            // Show when scrolling up
+            if (navigation.classList.contains('nav-hidden')) {
+                navigation.classList.remove('nav-hidden');
+            }
+        }
+        
+        // Show nav when at the top
+        if (currentScroll <= 100) {
+            navigation.classList.remove('nav-hidden');
+        }
+        
+        // Update last scroll position
+        lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
+    }, { passive: true });
+})();
+
